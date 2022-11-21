@@ -1,5 +1,4 @@
 sides = prompt("Type the number of sides")
-console.log(sides);
 function rollDice(sides){
     return Math.floor(Math.random() * sides) + 1;
 }

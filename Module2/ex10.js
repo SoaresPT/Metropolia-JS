@@ -13,7 +13,7 @@ for (let i=0; i < numberOfCandidates; i++) {
 
 numberOfVoters = prompt("How many voters")
 for (let j=0; j < numberOfVoters; j++) {
-    vote = prompt("Enter the candidate name you wish to vote for").toLowerCase();
+    vote = prompt(`Voter ${j+1} - Enter the candidate name you wish to vote for`).toLowerCase();
     arrayOfCandidates.forEach(candidate => {
         if (vote == candidate.name) {
            candidate.votes += 1;
@@ -24,10 +24,7 @@ for (let j=0; j < numberOfVoters; j++) {
 //console.log(arrayOfCandidates);
 
 // Invert the array
-arrayOfCandidates.sort((a, b) => {
-    //console.log(a, b);
-    return b - a;
- });
+arrayOfCandidates.sort((a, b) => b.votes - a.votes);
 
 console.log(`The winner is ${arrayOfCandidates[0].name} with ${arrayOfCandidates[0].votes} votes.`);
 console.log(`Results:`);
