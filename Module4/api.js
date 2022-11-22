@@ -2,7 +2,7 @@ const searchFormElem = document.querySelector("form");
 const showsContainerElem = document.querySelector("#shows");
 const doalogElem = document.querySelector("dialog");
 const closeModelElem = document.querySelector("#closeModel");
-const modelTitleElem = document.querySelector("#modelTitle");
+const modalTitleElem = document.querySelector("#modalTitle");
 
 closeModelElem.addEventListener("click", () => doalogElem.close());
 
@@ -29,7 +29,7 @@ searchFormElem.addEventListener("submit", async function(submitEvent) {
 
     moreDetailsElem.addEventListener("click", () => {
       doalogElem.showModal();
-      modelTitleElem.textContent = show.name;
+      modalTitleElem.textContent = show.name;
     });
   
     const img = document.createElement("img");
