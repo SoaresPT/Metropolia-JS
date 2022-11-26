@@ -1,10 +1,84 @@
+html {
+    font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: rgb(0, 0, 0);
+    color: #ffffff;
+    text-decoration: bold;
+}
+
+body dialog{
+    background: #fca311;
+}
+
+
+
 dialog nav #closeModel {
     color: red;
     font-size: 2vw;
     display: inline-flex;
     float: right;
+    align-items: center;
+    cursor: pointer;
 }
 
 dialog nav #modalTitle {
     display: inline-flex;
+    text-decoration: overline underline #14213d;
 }
+
+#shows {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    width: min(100% - 50px, 1200px);
+    margin-inline: auto;
+    margin-top: 25px;
+    margin-bottom: 100px;
+}
+#shows .show {
+    position: relative;
+    border-radius: 10px;
+    width: 200px;
+    flex-grow: 1;
+    max-width: 250px;
+    padding: 10px;
+    background: #fca311;
+}
+
+#shows .show a{
+    margin-bottom: 10px;
+    font-size: large;
+    color: #14213d;
+}
+
+#shows .show h2 {
+    margin: 0px;
+    margin-bottom: 10px;
+    font-weight: 500;
+    text-decoration: underline #14213d;
+}
+#shows .show .genres .genre {
+    text-decoration: none;
+    display: inline-flex;
+    margin-top: 2px;
+    border-radius: 2px;
+    padding: 2px;
+    text-decoration: underline #fca311;
+    background-color: #fca311;
+    color: #ffffff;
+}
+
+#shows .show .genres .genre:not(:last-child)::after{
+    content: "|";
+    margin-left: 1px;
+}
+#shows .show .summary {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+  }
