@@ -48,7 +48,6 @@ searchFormElem.addEventListener("submit", async function(submitEvent) {
     const summaryElem = document.createElement("div");
     summaryElem.classList.add("summary");
     summaryElem.innerHTML = show.summary;
-    
     showContainerElem.append(nameElem, img, summaryElem, moreDetailsElem);
     if(show.genres?.length) img.after(genreContainer)
     showsContainerElem.append(showContainerElem);

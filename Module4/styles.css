@@ -5,14 +5,11 @@ html {
 body {
     background: rgb(0, 0, 0);
     color: #ffffff;
-    text-decoration: bold;
 }
 
 body dialog{
     background: #fca311;
 }
-
-
 
 dialog nav #closeModel {
     color: red;
@@ -46,29 +43,32 @@ dialog nav #modalTitle {
     max-width: 250px;
     padding: 10px;
     background: #fca311;
+    color: #14213d;
 }
 
 #shows .show a{
     margin-bottom: 10px;
     font-size: large;
     color: #14213d;
+    position: relative;
+    top: 3px;
 }
 
 #shows .show h2 {
     margin: 0px;
     margin-bottom: 10px;
-    font-weight: 500;
     text-decoration: underline #14213d;
+    max-width: 200px;
+    text-align: center;
 }
 #shows .show .genres .genre {
-    text-decoration: none;
     display: inline-flex;
-    margin-top: 2px;
-    border-radius: 2px;
+    /*margin-top: 2px;
     padding: 2px;
-    text-decoration: underline #fca311;
-    background-color: #fca311;
-    color: #ffffff;
+    color: #e5e5e5;*/
+    font-weight: bold;
+    margin: auto;
+    padding: 0.05rem;
 }
 
 #shows .show .genres .genre:not(:last-child)::after{
@@ -82,3 +82,32 @@ dialog nav #modalTitle {
     -webkit-line-clamp: 5;
     -webkit-box-orient: vertical;
   }
+
+input#submitbutton {
+    border-radius: 4px;
+    background-color: #14213d;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 90px;
+    cursor: pointer;
+    margin: 2.5px;
+}
+
+input#query {
+    background-color: #14213d;
+    border: none;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 150px;
+    margin: 2.5px;
+    color: white;
+    transition: width 0.4s ease-in-out;
+}
+
+input#query:focus{
+    width: 200px;
+}
