@@ -5,5 +5,5 @@ function concat(arrayOfStrings){
     }
     return word
 }
-names = concat(["Johnny", "DeeDee", "Joey", "Marky"]);
+const names = concat(["Johnny", "DeeDee", "Joey", "Marky"]);
 document.querySelector("#target").innerHTML += `<li>${names}</li>`;
