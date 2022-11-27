@@ -1,5 +1,5 @@
-numberOfCandidates = prompt("How many candidates")
-arrayOfCandidates = []
+const numberOfCandidates = prompt("How many candidates")
+let arrayOfCandidates = []
 for (let i=0; i < numberOfCandidates; i++) {
     candidateName = prompt(`Name for candidate ${i+1}`).toLowerCase();
     candidate = {
@@ -9,19 +9,15 @@ for (let i=0; i < numberOfCandidates; i++) {
     arrayOfCandidates.push(candidate);
 }
 
-//console.log(arrayOfCandidates);
-
-numberOfVoters = prompt("How many voters")
+const numberOfVoters = prompt("How many voters")
 for (let j=0; j < numberOfVoters; j++) {
     vote = prompt(`Voter ${j+1} - Enter the candidate name you wish to vote for`).toLowerCase();
     arrayOfCandidates.forEach(candidate => {
         if (vote == candidate.name) {
            candidate.votes += 1;
-           //console.log(`Voted for ${candidate.name}`);
         }
     });
 }
-//console.log(arrayOfCandidates);
 
 // Invert the array
 arrayOfCandidates.sort((a, b) => b.votes - a.votes);
